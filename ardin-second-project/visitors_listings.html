@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/visitor_listing.css">
+    <title>Visitor Listing</title>
+</head>
+<body>
+    <body>
+        <header>
+            <a href="index.html"><img src="files/logo.png" alt="Art image" class="header-image" ></a>
+            <h1>Street ARTists</h1>
+            <button class="auction-btn"><img src="files/gavel.png" alt=""></button>
+        </header>
+        <main>
+            <section class="item-listing">
+                <!-- Items will be rendered here -->
+            </section>
+        </main>
+        <div class="filter-panel" style="display: none; right: -100%;">
+            <button class="close-btn">&times;</button>
+            <h2>Filter by</h2>
+            <label for="item-name-filter">By Item Title</label>
+            <input type="text" id="item-name-filter" placeholder="Label">
+            <label for="artist-filter">By Artist</label>
+            <select id="artist-filter">
+                <option value="">Choose</option>
+            </select>
+            <label for="min-price-filter">By Price</label>
+            <input type="number" id="min-price-filter" placeholder="Min">
+            <input type="number" id="max-price-filter" placeholder="Max">
+            <label for="type-filter">By Type</label>
+            <select id="type-filter">
+                <option value="">Choose</option>
+            </select>
+            <button class="apply-btn">Apply</button>
+        </div>
+        <button class="filter-btn"><img src="files/filter.png" alt=""></button>
+    <script src="js/data.js"></script>
+    <script src="js/visitor.js"></script>
+</body>
+</html>

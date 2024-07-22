@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetARTists</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Street ARTists</h1>
+    </header>
+    <div class="image-container">
+        <img src="files/logo.png" alt="Art image" class="header-image">
+    </div>
+    <div class="options">
+        <div class="join-artist hoverable">
+            <h3>Join as Artist</h3>
+            <div class="artist-select">
+                <select id="artistSelect" onchange="redirectToArtistHome()">
+                    <option value="" disabled selected>Choose</option>
+                </select>
+            </div>
+        </div>
+        <div class="join-visitor hoverable" onclick="redirectToVisitorHome()">
+            <h3>Join as Visitor</h3>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Home</title>
+    <link rel="stylesheet" href="css/artist_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html"><img src="files/logo.png" alt="Art image" class="header-image" ></a>
+            <h1 id="artistName"></h1>
+            <div class="menu-icon" id="menuIcon">
+                <img src="files/icons8-menu-50.png" alt="Menu Icon">
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <ul>
+                    <li><a href="#" onclick="redirectBackToArtistHome()">Home</a></li>
+                    <li><a href="#" onclick="redirectToArtistItems()">Items</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="stats">
+            <div class="stat-box">
+                <h2>Total Items Sold</h2>
+                <p>12/35</p>
+            </div>
+            <div class="stat-box">
+                <h2>Total Income</h2>
+                <p>$1700</p>
+            </div>
+            <div class="auction-box">
+                <h2>Live Auctioning Item</h2>
+                <p>$1200 <span>current bid</span></p>
+            </div>
+        </div>
+        <div class="income-display">
+            <h2>Display my income for last</h2>
+            <div class="time-buttons">
+                <button>7 days</button>
+                <button class="active">14 days</button>
+                <button>1 month</button>
+                <button>1 year</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="incomeChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

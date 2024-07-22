@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Home</title>
+    <link rel="stylesheet" href="css/artist_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html"><img src="files/logo.png" alt="Art image" class="header-image" ></a>
+            <h1 id="artist-name"></h1>
+            <div class="menu-icon" id="menuIcon">
+                <img src="files/icons8-menu-50.png" alt="Menu Icon">
+            </div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <ul>
+                    <li><a href="#" onclick="redirectBackToArtistHome()">Home</a></li>
+                    <li><a href="#" onclick="redirectToArtistItems()">Items</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="items-container" class="items-container">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </main>
+    <div id="add-item-form" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddItemForm()">&times;</span>
+            <form id="item-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+                
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+                
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="imageUrl" required>
+                
+                <label for="isPublished">Published:</label>
+                <input type="checkbox" id="isPublished" name="isPublished" checked>
+                
+                <input type="hidden" id="itemId" name="itemId">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fae8d6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5e6cc;
+    color: #835858;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.header-image {
+    width: 120px;
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    height: 4px;
+    background-color: #835858;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.stat-box, .auction-box {
+    background-color: #835858;
+    color: #f5e6cc;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+}
+
+.stat-box h2, .auction-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p, .auction-box p {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.auction-box span {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.income-display {
+    background-color: #f5e6cc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0 1rem;
+}
+
+.income-display h2 {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.time-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.time-buttons button {
+    background-color: #835858;
+    color: #f5e6cc;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.time-buttons button.active, .time-buttons button:hover {
+    background-color: #e8d7c3;
+    color: #835858;
+}
+
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .stat-box, .auction-box {
+        width: 20%;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px; 
+    right: 1px;
+    background-color: #835858;
+
+    border-radius: 8px;
+    display: none; 
+    z-index: 1000;
+}
+
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 0.5rem;
+}
+
+.dropdown-menu ul li a {
+    color: #e8d7c3;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #e8d7c3;
+    color:#835858;
+}
+
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+.item-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    background-color: #fff;
+    flex: 1 1 calc(33.333% - 32px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.item-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item-card h3 {
+    margin: 10px 0;
+}
+
+.item-card .price {
+    font-size: 1.2em;
+    color: #f00;
+}
+
+.item-card .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.item-card .controls button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.item-card .controls .publish-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.item-card .controls .remove-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.item-card .controls .edit-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.add-new-item-card {
+    border: 2px dotted #ccc;
+    padding: 16px;
+    background-color: #fff;
+    flex: 1 1 calc(33.333% - 32px);
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.item-card {
+    background-color: #f5e6cc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.item-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.item-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-card p {
+    margin: 0.5rem 0;
+}
